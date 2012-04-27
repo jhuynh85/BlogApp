@@ -17,6 +17,7 @@
 import webapp2
 from escape import *
 from rot13 import *
+from signup import *
 
 months = ['January',
           'February',
@@ -102,4 +103,6 @@ class ThanksHandler(webapp2.RequestHandler):
     
 app = webapp2.WSGIApplication([('/', MainHandler),
                                 ('/thanks', ThanksHandler), 
-                                ('/unit2/rot13', ROT13Handler)], debug=True)
+                                ('/unit2/rot13', ROT13Handler), 
+                                ('/unit2/signup', SignupHandler),
+                                ('/unit2/welcome', WelcomeHandler)], debug=True)
